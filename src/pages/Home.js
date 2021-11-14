@@ -7,13 +7,19 @@ function Home(props) {
     
     return (
         <div>
-            <h1>Hi, I'm Ashley. I would like to code for you. </h1>
-            <div>
+            <div class="home">
+            <h1 class="home-h1">Hi, I'm Ashley. I would like to code for you. </h1>
+            <h2 class="home-h2">Thank you for visiting</h2>
+            </div>
+            <div class="links">
                 <Link to="/about">
-                    <div>About</div>
+                    <div class="about">About</div>
                 </Link>   
                 <Link to="/projects">
-                    <div>Projects</div>
+                    <div class="projects">Projects</div>
+                </Link> 
+                <Link to="/contact">
+                    <div class="contact">Contact me</div>
                 </Link> 
             </div>
         </div>
