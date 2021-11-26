@@ -4,7 +4,7 @@
   height: 100vh;
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  background-color: #e8e6e6;
+  background-color: white;
   overflow: auto;
 }
 
@@ -51,11 +51,17 @@ a {
 .home-h1 {
   animation: fade-in linear 4s;
   font-size: 50px;
+  background-color:#00d97e;
+  border-radius: 15px;
+  padding: 0 10px;
 }
 
 .home-h2{
   animation: fade-in2 linear 4s;
   font-size: 40px;
+  background-color:#00d97e;
+  border-radius: 15px;
+  padding: 0 10px;
 }
 
 @keyframes fade-in{
@@ -76,7 +82,7 @@ a {
   width: 100%;
   height: 500px;
   background-image: url(https://images.unsplash.com/photo-1479030160180-b1860951d696?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2370&q=80);
-  border-top: 20px solid #8affc0;
+  border-top: 4px solid #00d97e;
   display: flex;
   align-items: center; 
   justify-content: space-evenly;
@@ -95,7 +101,7 @@ a {
   justify-content: center;
   font-size: 30px;
   font-weight: 600;
-  color: #0eab6c
+  color: #0eab6c;
 }
 
 .about:hover,
@@ -133,14 +139,32 @@ a {
 
 }
 
+.projects-background{
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
 .projects-div {
   width: 100%;
   height: 100vh;
+  background-color: #8affc0;
+  border-top: 4px solid #00d97e;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
 .projects-card {
-
+  width: 250px;
+  height: 260px;
+  background-color: white;
+  border: 4px solid #00d97e;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 75px;
+  margin-top: 50px; 
 }

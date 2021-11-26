@@ -9,8 +9,8 @@ function Projects(props) {
 
     
     return (
-        <div>
-            <h1>A few of my projects and builds</h1>
+        <div class="projects-background">
+            <h1 class="projects-h1">A few of my projects and builds</h1>
                 <div class="projects-div">
                     <div class="projects-card">
                         <a href="https://l2qee.csb.app/"><img class="thumbnail" src={lampshade} alt="lampshade" /></a>
