@@ -208,6 +208,7 @@ a {
   }
   .about-body{
     overflow: auto;
+    background-attachment: fixed;
   }
   .about-div{
     height: 800px;
