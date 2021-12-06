@@ -230,14 +230,30 @@ a {
   .projects-background{
     background-attachment: fixed;
     overflow: scroll;
-    height: 160vh
   }
+  
   .projects-div{
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     padding-bottom: 10px;
   }
   .projects-h1{
     font-size: 20px;
+  }
+  .thumbnail{
+    width: 160px;
+    height: 160px;
+    margin-top: 12px;
+    margin-right: 5px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .projects-card{
+    width: 180px;
+    height: 190px;
+    margin-left: 5px;
+    padding-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
   .contact-div{
     height: 130vh;
