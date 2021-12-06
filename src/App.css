@@ -228,13 +228,13 @@ a {
     padding: 5px 5px;
   }
   .projects-background{
-    height: 160vh;
-    overflow: auto;
+    background-attachment: fixed;
+    overflow: scroll;
+    height: 160vh
   }
   .projects-div{
     grid-template-columns: 1fr;
     padding-bottom: 10px;
-    height: 160vh;
   }
   .projects-h1{
     font-size: 20px;
