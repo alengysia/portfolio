@@ -140,19 +140,25 @@ a {
 }
 
 .projects-background{
-  background-color: white;
+  background-color: #8affc0;
   margin: 0;
   padding: 0;
+}
+
+.projects-h1{
+  background-color: white;
+  margin-top: 0;
+  height: 50px;
+  padding-top: 20px;
+  border-bottom: 4px solid #00d97e;
 }
 
 .projects-div {
   width: 100%;
   height: 100vh;
   background-color: #8affc0;
-  border-top: 4px solid #00d97e;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
 .projects-card {
@@ -222,17 +228,16 @@ a {
     padding: 5px 5px;
   }
   .projects-background{
-    height: 140vh;
-    
+    height: 160vh;
+    overflow: auto;
   }
   .projects-div{
-    overflow: auto;
     grid-template-columns: 1fr;
     padding-bottom: 10px;
     height: 160vh;
   }
   .projects-h1{
-    font-size: 24px;
+    font-size: 20px;
   }
   .contact-div{
     height: 130vh;
