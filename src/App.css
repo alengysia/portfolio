@@ -211,7 +211,7 @@ a {
   }
   .about-body{
     overflow: auto;
-    height: 120vh;
+    height: 130vh;
   }
   .about-div{
     height: 800px;
@@ -225,6 +225,10 @@ a {
     overflow: auto;
     grid-template-columns: 1fr;
     padding-bottom: 10px;
+    height: 130vh;
+  }
+  .contact-div{
+    height: 130vh;
   }
   .resume{
     width: 400px;
