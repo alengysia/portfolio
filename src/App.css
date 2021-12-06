@@ -174,7 +174,10 @@ a {
 }
 
 @media(max-width: 800px){
-  
+  html,
+  body{
+    height: 140vh;
+  }
   .nav{
     justify-content: center;
     margin: 0;
@@ -208,7 +211,6 @@ a {
   }
   .about-body{
     overflow: auto;
-    background-attachment: fixed;
   }
   .about-div{
     height: 800px;
