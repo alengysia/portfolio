@@ -211,6 +211,7 @@ a {
   }
   .about-body{
     overflow: auto;
+    height: 120vh;
   }
   .about-div{
     height: 800px;
