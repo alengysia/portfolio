@@ -221,11 +221,18 @@ a {
     margin: 5px 5px;
     padding: 5px 5px;
   }
+  .projects-background{
+    height: 140vh;
+    
+  }
   .projects-div{
     overflow: auto;
     grid-template-columns: 1fr;
     padding-bottom: 10px;
     height: 140vh;
+  }
+  .projects-h1{
+    font-size: 24px;
   }
   .contact-div{
     height: 130vh;
