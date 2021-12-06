@@ -176,7 +176,7 @@ a {
 @media(max-width: 800px){
   html,
   body{
-    height: 140vh;
+    height: 200vh;
   }
   .nav{
     justify-content: center;
