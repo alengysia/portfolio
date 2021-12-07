@@ -122,7 +122,7 @@ a {
 
 .about-div{
   width: 82%;
-  height: 80%;
+  height: 50%;
   display: inline-block;
   font-size: 18px;
   line-height: 1.5;
@@ -214,6 +214,12 @@ a {
     width: 110px;
     height: 110px;
     font-size: 24px;
+  }
+  .about:hover,
+  .projects:hover,
+  .contact:hover{
+    width: 150px;
+    height: 150px;
   }
   .about-body{
     overflow: auto;
