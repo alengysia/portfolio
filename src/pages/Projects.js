@@ -32,6 +32,7 @@ function Projects(props) {
                         <a href="https://reverent-engelbart-e9df11.netlify.app/"><img class="thumbnail" src={drumkit} alt="meditrack" /></a>
                         <a href="https://codesandbox.io/s/wonderful-orla-gk3q4">The code</a>
                     </div>
+                    
             </div>
         </div>
     );

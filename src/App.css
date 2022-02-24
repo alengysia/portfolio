@@ -39,13 +39,9 @@ a {
 }
 
 .home{
-  height: 400px;
-  background-image: url(https://images.pexels.com/photos/2876511/pexels-photo-2876511.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
 }
 
 .home-h1 {
@@ -78,7 +74,7 @@ a {
 }
 
 
-.links{
+/* .links{
   width: 100%;
   height: 500px;
   background-image: url(https://images.unsplash.com/photo-1479030160180-b1860951d696?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2370&q=80);
@@ -86,9 +82,9 @@ a {
   display: flex;
   align-items: center; 
   justify-content: space-evenly;
-}
+} */
 
-.about,
+/* .about,
 .projects,
 .contact {
   width: 150px;
@@ -102,9 +98,9 @@ a {
   font-size: 30px;
   font-weight: 600;
   color: #0eab6c;
-}
+} */
 
-.about:hover,
+/* .about:hover,
 .projects:hover,
 .contact:hover {
   width: 170px;
@@ -113,7 +109,7 @@ a {
   border: 4px solid #0eaba1;
   color: #0eaba1;
   box-shadow: 0 0 15px #e600c3;
-}
+} */
 
 .about-body{
   background-color: #8affc0;
