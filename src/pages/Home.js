@@ -18,6 +18,10 @@ function Home(props) {
             let count = canvas.height;
             let img1 = new Image()
             img1.src = afishy
+            let aFishX = 150;
+            let aFishY = 150;
+            let aFishYMax = 175;
+            let down = true
             let bubbles = [];
             let bubbleCount = 20;
             let bubbleSpeed = 1;
@@ -38,7 +42,11 @@ function Home(props) {
               
             
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                
+                
 
+                
                 function drawBackground(){
                     let myGradient = ctx.createLinearGradient(0,0,0,900);
                     myGradient.addColorStop(0, '#00d4ff');
@@ -49,15 +57,31 @@ function Home(props) {
                     ctx.fill()
                 }
 
-            drawBackground()
+                drawBackground()
             
                 function aboutFish(){
-                    ctx.drawImage(img1, 150, 150);
+                    
+                    ctx.drawImage(img1, aFishX, aFishY);
+                    
+                    if(down == true && aFishY < aFishYMax){
+                        aFishY += .3 
+                        if(aFishY == aFishYMax){
+                            down = false
+                        }
+                    } else {
+                        down = false
+                        aFishY -= .3
+                        if( aFishY == 150){
+                            down = true
+                        }
+                    }
                     
                     
                 }
-            aboutFish()
-               
+                aboutFish()
+                
+                
+                
             
                 ctx.beginPath();
                 for (var i = 0; i < bubbles.length; i++) {
