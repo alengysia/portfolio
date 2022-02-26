@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import * as React from 'react';
 import { useEffect, useRef, useState } from "react";
-
+import afishy from "../assets/afishy.png"
 
 
 function Home(props) {
@@ -16,6 +16,8 @@ function Home(props) {
             const canvas = canvasRef.current;
             const ctx = canvas.getContext('2d');
             let count = canvas.height;
+            let img1 = new Image()
+            img1.src = afishy
             let bubbles = [];
             let bubbleCount = 20;
             let bubbleSpeed = 1;
@@ -33,9 +35,7 @@ function Home(props) {
 
 
 
-                // ------------
-                // Clear Canvas
-                // ------------
+              
             
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -51,10 +51,13 @@ function Home(props) {
 
             drawBackground()
             
-            
-                // ------------
-                // Draw Bubbles
-                // ------------
+                function aboutFish(){
+                    ctx.drawImage(img1, 150, 150);
+                    
+                    
+                }
+            aboutFish()
+               
             
                 ctx.beginPath();
                 for (var i = 0; i < bubbles.length; i++) {
@@ -70,9 +73,7 @@ function Home(props) {
                   }
                 }
             
-                // ---------------
-                // On Bubble Hover
-                // ---------------
+               
             
                 for (var i = 0; i < bubbles.length; i++) {
                   if(mouseOffset.x > bubbles[i].position.x - bubbles[i].radius && mouseOffset.x < bubbles[i].position.x + bubbles[i].radius) {
@@ -91,11 +92,7 @@ function Home(props) {
             
               window.requestAnimationFrame(animate);
             
-            
-            
-              // ------------------
-              // Bubble Constructor
-              // ------------------
+          
             
               var createBubble = function() {
                 this.position = {x: 0, y: 0};
@@ -111,7 +108,7 @@ function Home(props) {
                 this.rotation = Math.floor(Math.random() * (this.maxRotation - (this.maxRotation * -1))) + (this.maxRotation * -1);
                 this.rotationDirection = 'forward';
             
-                // Populate Lines
+                
                 for (var i = 0; i < popLines; i++) {
                   var tempLine = new createLine();
                       tempLine.bubble = this;
@@ -130,7 +127,7 @@ function Home(props) {
                   this.popping = false;
                 }
             
-                // Render the circles
+                
                 this.render = function() {
                   if(this.rotationDirection === 'forward') {
                     if(this.rotation < this.maxRotation) {
@@ -164,7 +161,7 @@ function Home(props) {
                   
                   ctx.restore();
             
-                  // Draw the lines
+                  
                   for (var a = 0; a < this.lines.length; a++) {
                     if(this.lines[a].popping) {
                       if(this.lines[a].lineLength < popDistance && !this.lines[a].inversePop) {
@@ -188,22 +185,12 @@ function Home(props) {
               }
             
             
-            
-              // ----------------
-              // Populate Bubbles
-              // ----------------
-            
               for (var i = 0; i < bubbleCount; i++) {
                 var tempBubble = new createBubble();
             
                 bubbles.push(tempBubble);
               }
             
-            
-            
-              // ----------------
-              // Line Constructor
-              // ----------------
             
               function createLine() {
                 this.lineLength = 0;
