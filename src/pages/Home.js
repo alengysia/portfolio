@@ -23,7 +23,7 @@ function Home(props) {
             img2.src = pfishy
             let aFishX = 150;
             let aFishY = 150;
-            let pFishX = 900;
+            let pFishX = 850;
             let pFishY = 300
             let aFishYMax = 175;
             let pFishYMax = 615;
