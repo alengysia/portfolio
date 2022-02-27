@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import * as React from 'react';
 import { useEffect, useRef, useState } from "react";
 import afishy from "../assets/afishy.png"
+import pfishy from "../assets/pfishy.png"
 
 
 function Home(props) {
@@ -17,10 +18,15 @@ function Home(props) {
             const ctx = canvas.getContext('2d');
             let count = canvas.height;
             let img1 = new Image()
+            let img2 = new Image()
             img1.src = afishy
+            img2.src = pfishy
             let aFishX = 150;
             let aFishY = 150;
+            let pFishX = 900;
+            let pFishY = 300
             let aFishYMax = 175;
+            let pFishYMax = 615;
             let down = true
             let bubbles = [];
             let bubbleCount = 20;
@@ -63,15 +69,15 @@ function Home(props) {
                     
                     ctx.drawImage(img1, aFishX, aFishY);
                     
-                    if(down == true && aFishY < aFishYMax){
+                    if(down === true && aFishY < aFishYMax){
                         aFishY += .3 
-                        if(aFishY == aFishYMax){
+                        if(aFishY === aFishYMax){
                             down = false
                         }
                     } else {
                         down = false
                         aFishY -= .3
-                        if( aFishY == 150){
+                        if( aFishY === 150){
                             down = true
                         }
                     }
@@ -79,6 +85,27 @@ function Home(props) {
                     
                 }
                 aboutFish()
+
+                function projectFish(){
+                    
+                    ctx.drawImage(img2, pFishX, pFishY);
+                    
+                    if(down === true && pFishY < pFishYMax){
+                        pFishY += .3 
+                        if(pFishY === pFishYMax){
+                            down = false
+                        }
+                    } else {
+                        down = false
+                        pFishY -= .3
+                        if( pFishY === 150){
+                            down = true
+                        }
+                    }
+                    
+                    
+                }
+                projectFish()
                 
                 
                 
