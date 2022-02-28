@@ -3,6 +3,7 @@ import * as React from 'react';
 import { useEffect, useRef, useState } from "react";
 import afishy from "../assets/afishy.png"
 import pfishy from "../assets/pfishy.png"
+import cfishy from "../assets/cfishy.png"
 
 
 function Home(props) {
@@ -19,13 +20,18 @@ function Home(props) {
             let count = canvas.height;
             let img1 = new Image()
             let img2 = new Image()
+            let img3 = new Image()
             img1.src = afishy
             img2.src = pfishy
-            let aFishX = 150;
+            img3.src = cfishy
+            let aFishX = 120;
             let aFishY = 150;
-            let pFishX = 850;
-            let pFishY = 300
+            let cFishX = 250; 
+            let cFishY = 500;
+            let pFishX = 870;
+            let pFishY = 270
             let aFishYMax = 175;
+            let cFishYMax = 525;
             let pFishYMax = 615;
             let down = true
             let bubbles = [];
@@ -85,6 +91,27 @@ function Home(props) {
                     
                 }
                 aboutFish()
+
+                function contactFish(){
+                    
+                    ctx.drawImage(img3, cFishX, cFishY);
+                    
+                    if(down === true && cFishY < cFishYMax){
+                        cFishY += .3 
+                        if(cFishY === cFishYMax){
+                            down = false
+                        }
+                    } else {
+                        down = false
+                        cFishY -= .3
+                        if( cFishY === 150){
+                            down = true
+                        }
+                    }
+                    
+                    
+                }
+                contactFish()
 
                 function projectFish(){
                     
